@@ -17,6 +17,11 @@ public class CityEntity {
 	@Column(name = "c_coronazone")
 	private String coronazone;
 
+	public CityEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public CityEntity(int id, String name, double population, String famousfor, String coronazone) {
 		super();
 		this.id = id;

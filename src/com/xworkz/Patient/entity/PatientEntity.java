@@ -16,6 +16,11 @@ public class PatientEntity {
 	private String birthPlace;
 	@Column(name="patient_corona")
 	private String corona;
+	
+	public PatientEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public PatientEntity(int id, String name, int age, String birthPlace, String corona) {
 		super();
 		this.id = id;

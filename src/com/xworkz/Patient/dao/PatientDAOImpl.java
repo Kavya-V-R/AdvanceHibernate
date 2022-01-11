@@ -76,7 +76,7 @@ public class PatientDAOImpl implements PatientDAO {
 		System.out.println("invoked the delete");
 		System.out.println(id);
 
-		SessionFactory factory = new Configuration().configure("bd.xml").addAnnotatedClass(PatientEntity.class)
+		SessionFactory factory = new Configuration().configure().addAnnotatedClass(PatientEntity.class)
 				.buildSessionFactory();
 		if (factory != null) {
 			Session session = factory.openSession();
@@ -90,7 +90,7 @@ public class PatientDAOImpl implements PatientDAO {
 				System.out.println("entity deleted");
 
 			} else {
-				System.out.println("entity is found to delete");
+				System.out.println("entity is not found to delete");
 			}
 			session.close();
 		}

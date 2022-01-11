@@ -29,22 +29,22 @@ public class CompanyDAOImpl implements CompanyDAO {
 	}
 
 	public CompanyEntity getById(int id) {
-		CompanyEntity entity = null;
+		CompanyEntity companyentity = null;
 		System.out.println("invoked getById");
 		System.out.println("id passed as arg " + id);
-		Configuration configuration = new Configuration().configure().addAnnotatedClass(CompanyEntity.class);
-		SessionFactory factory = configuration.buildSessionFactory();
+		SessionFactory factory =new Configuration().configure().addAnnotatedClass(CompanyEntity.class)
+ .buildSessionFactory();
 		if (factory != null) {
 			Session session = factory.openSession();
-			entity = session.get(CompanyEntity.class, id);
-			if (entity != null) {
+			companyentity = session.get(CompanyEntity.class, id);
+			if (companyentity != null) {
 				System.out.println("entity is found");
 			} else {
 				System.out.println("entity is not found");
 			}
-			session.close();
+		
 		}
-		return entity;
+		return companyentity;
 
 	}
 
@@ -78,7 +78,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 		System.out.println("invoked the delete");
 		System.out.println(id);
 
-		SessionFactory factory = new Configuration().configure("bd.xml").addAnnotatedClass(CompanyEntity.class)
+		SessionFactory factory = new Configuration().configure().addAnnotatedClass(CompanyEntity.class)
 				.buildSessionFactory();
 		if (factory != null) {
 			Session session = factory.openSession();
@@ -92,7 +92,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 				System.out.println("entity deleted");
 
 			} else {
-				System.out.println("entity is found to delete");
+				System.out.println("entity is not found to delete");
 			}
 			session.close();
 		}

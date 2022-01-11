@@ -89,7 +89,7 @@ public class CountryDAOImpl implements CountryDAO {
 				System.out.println("entity deleted");
 
 			} else {
-				System.out.println("entity is found to delete");
+				System.out.println("entity is not found to delete");
 			}
 			session.close();
 		}

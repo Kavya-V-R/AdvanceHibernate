@@ -3,18 +3,23 @@ package com.xworkz.Country.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "country_details")
+@Table(name = "country_detailss")
 
 public class CountryEntity {
 	@Id
-	@Column(name = "c_id")
+	@Column(name = "co_id")
 	private int id;
-	@Column(name = "c_name")
+	@Column(name = "co_name")
 	private String name;
-	@Column(name = "c_continent")
+	@Column(name = "co_continent")
 	private String continent;
-	@Column(name = "c_population")
+	@Column(name = "co_population")
 	private double population;
+
+	public CountryEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public CountryEntity(int id, String name, String continent, double population) {
 		super();

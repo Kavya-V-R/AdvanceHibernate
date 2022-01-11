@@ -17,7 +17,8 @@ public class CompanyRunner {
 		//dao.create(companyEntity2);
 		//CompanyEntity companyEntity3 = new CompanyEntity(3, "zworkz", "IT", "MNC", "www.ghi");
 		//dao.create(companyEntity3);
-		//CompanyEntity entity = dao.getById(3);
+		//CompanyEntity entity = 
+		//dao.getById(3);
 		//System.out.println(entity);
 		//dao.updateNameById("xworkz-odc", 1);
 		dao.deleteById(3);
